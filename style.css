@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --green: hsl(75, 94%, 57%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+}
+
+@font-face {
+    font-family: "Inter-Regular";
+    src: url(assets/fonts/static/Inter-Regular.ttf);
+}
+@font-face {
+    font-family: "Inter-SemiBold";
+    src: url(assets/fonts/static/Inter-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Inter-Bold";
+    src: url(assets/fonts/static/Inter-Bold.ttf);
+}
+
+body{
+    height: 100vh;
+    background-color: var(--grey-900);
+}
+
+main{
+    height: 100vh;
+    position: relative;
+}
+
+.container{
+    background-color: var(--grey-800);
+    max-height: 90%;
+    width: min(80%, 400px);
+    color: hsl(0, 0%, 100%);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 15px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .user-details img{
+    width: 100px;
+    border-radius: 50%;
+}
+.container .user-details h1{
+    font-family: Inter-Bold;
+    margin: 20px 0 10px;
+    font-size: clamp(1.25rem, 1.107rem + 0.71vw, 1.75rem);
+}
+.container .user-details h2{
+    font-family: Inter-Semibold;
+    color: var(--green);
+    font-size: 16px;
+}
+.container .user-details p{
+    font-family: Inter-Regular;
+    margin: 20px 0;
+    font-size: clamp(0.625rem, 0.518rem + 0.54vw, 1rem);
+}
+.container .profile-links-container a{
+    display: block;
+    font-size: clamp(0.75rem, 0.679rem + 0.36vw, 1rem);
+    text-decoration: none;
+    color: white;
+    font-family: Inter-Semibold;
+    background-color: var(--grey-700);
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.container .profile-links-container a:not(:first-child){
+    margin-top: 10px;
+}
+
+.container .profile-links-container a:hover{
+    background-color: var(--green);
+    color: var(--grey-800);
+}
+
+.attribution {
+    width: 100%; 
+    font-size: 11px; 
+    text-align: center; 
+    font-family: Inter-Regular;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
